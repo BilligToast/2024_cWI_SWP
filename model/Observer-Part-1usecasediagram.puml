@@ -1,15 +1,26 @@
-@startuml Observer-Part-1
+@startuml usecase_part_01
 
-class NewsChannel{
+left to right direction
+actor NewsAgency as Agency <<System>>
+actor NewsChannel as Channel <<System>>
 
-    - name: string
+rectangle "News Delivery"{
 
-    + NewsChanel(name: string)
+    (broadcasts news to NewsChannels) as broadcast
 
-    + notify(message: string)
+    (is notified about news) as notify
 
+    (unsubscribes from NewAgency) as unsubscribe
+
+    (subscribes to NewsAgency) as subscribe
 
 }
+
+Channel --> subscribe
+Channel --> unsubscribe
+Channel --> notify
+
+Agency --> broadcast
 
 
 @enduml

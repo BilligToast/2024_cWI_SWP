@@ -1,0 +1,12 @@
+@startuml observer_part_01_001
+
+
+class NewsAgency{
+
+}
+
+class Newschannel {
+
+}
+
+@enduml
