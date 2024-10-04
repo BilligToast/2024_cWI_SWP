@@ -25,6 +25,6 @@ class NewsChannel {
 
 }
 note right of NewsChannel: Observer / Subscriber
-NewsAgency o-right-> "0..*" NewsChannel: notify >
+NewsAgency o-right-> "0...*" NewsChannel: notify >
 
 @enduml
